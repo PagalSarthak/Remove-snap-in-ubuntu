@@ -1,5 +1,6 @@
 #!/bin/bash
-echo
+echo "https://github.com/PagalSarthak/Remove-snap-in-ubuntu"
+echo "thx for using our script"
 
 # Function to prompt for user confirmation
 prompt_confirmation() {
