@@ -19,5 +19,6 @@ it remove defulte snap pakage that come with ubuntu
 u can remove then by using this cmd:
 ```sudo snap remove <pkg name>```
 
+```take backup of system and use at ur own risk```
 
 
