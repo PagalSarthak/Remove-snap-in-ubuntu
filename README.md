@@ -13,12 +13,6 @@ The script is designed to remove Snap packages and the Snapd service from an Ubu
 # Which ubuntu ver it Support?
 it support 24.04,22.04
 
-# Note 
-this script will not remove additional snap packages that u download
-it remove defulte snap pakage that come with ubuntu
-u can remove then by using this cmd:
-```sudo snap remove <pkg name>```
-
 ```take backup of system and use at ur own risk```
 
 
