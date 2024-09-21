@@ -42,14 +42,6 @@ remove_snapd() {
     sudo apt-get purge -y snapd || true
 }
 
-# Function to clean up residual Snap directories
-cleanup() {
-    echo "Cleaning up leftover Snap directories..."
-    sudo rm -rf /var/cache/snapd/
-    sudo rm -rf /var/snap/
-    sudo rm -rf /snap/
-    sudo rm -rf /var/lib/snapd/
-}
 
 # Function to create a preference file to prevent Snap from being reinstalled
 create_preference_file() {
@@ -97,7 +89,7 @@ while snap list | awk 'NR > 1 {print $1}' | grep .; do
 done
 
 # Clean up Snap directories and create a preference file
-cleanup
+
 create_preference_file
 
 # Prompt for confirmation to install Firefox
