@@ -82,10 +82,10 @@ install_firefox() {
     fi
 }
 
-# Function to install GNOME Software
+# Function to install GNOME Software Center
 install_gnome_software() {
-    echo "Installing GNOME Software..."
-    sudo apt install -qq -y gnome-software || handle_error "Failed to install GNOME Software"
+    echo "Installing GNOME Software Center..."
+    sudo apt install -qq -y gnome-software || handle_error "Failed to install GNOME Software Center"
 }
 
 # Function to handle errors
@@ -119,8 +119,8 @@ if prompt_confirmation "Do you want to add Mozilla's APT repository and install 
 fi
 
 IS_GNOME=1
-# Prompt for confirmation to install GNOME Software
-if prompt_confirmation "Do you want to install GNOME Software?"; then
+# Prompt for confirmation to install GNOME Software Center
+if prompt_confirmation "Do you want to install GNOME Software Center?"; then
   IS_GNOME=0
   install_gnome_software
 fi
@@ -139,7 +139,7 @@ if [ "$IS_FIREFOX" -eq 0 ] || [ "$IS_GNOME" -eq 0 ]; then
   fi
 
   if [ "$IS_GNOME" -eq 0 ] ; then
-    echo "    - GNOME Software"
+    echo "    - GNOME Software Center"
   fi
 
   echo "  has been installed."
